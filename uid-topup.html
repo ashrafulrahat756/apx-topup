@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UID TOP UP | APX TOPUP</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#080808;
+    color:#fff;
+}
+
+.app{
+    max-width:650px;
+    margin:auto;
+    padding:20px;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0 25px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+}
+
+.logo span{
+    color:#ff6a00;
+}
+
+.back{
+    color:#999;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    margin:20px 0 30px;
+}
+
+.title .icon{
+    width:65px;
+    height:65px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ff6a0018;
+    border:1px solid #ff6a00;
+    border-radius:18px;
+    font-size:30px;
+}
+
+.title h1{
+    margin-top:18px;
+    font-size:32px;
+}
+
+.title h1 span{
+    color:#ff6a00;
+}
+
+.title p{
+    color:#777;
+    margin-top:8px;
+}
+
+/* FORM */
+
+.order-box{
+    background:#111;
+    border:1px solid #252525;
+    border-radius:22px;
+    padding:25px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:9px;
+    color:#ddd;
+}
+
+input,
+select{
+    width:100%;
+    padding:15px;
+    background:#090909;
+    border:1px solid #292929;
+    border-radius:12px;
+    color:#fff;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus,
+select:focus{
+    border-color:#ff6a00;
+}
+
+/* PACKAGES */
+
+.packages{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.package{
+    position:relative;
+}
+
+.package input{
+    display:none;
+}
+
+.package label{
+    display:block;
+    padding:17px 10px;
+    text-align:center;
+    background:#0a0a0a;
+    border:1px solid #292929;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.package label strong{
+    display:block;
+    font-size:16px;
+    color:#fff;
+}
+
+.package label span{
+    display:block;
+    margin-top:5px;
+    font-size:12px;
+    color:#777;
+}
+
+.package input:checked + label{
+    border-color:#ff6a00;
+    background:#ff6a0012;
+    box-shadow:0 0 15px #ff6a0012;
+}
+
+/* PAYMENT */
+
+.payment-info{
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:13px;
+    background:#ff6a000d;
+    border:1px solid #ff6a0030;
+    color:#aaa;
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* BUTTON */
+
+.submit-btn{
+    width:100%;
+    padding:16px;
+    border:0;
+    border-radius:13px;
+    background:#ff6a00;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.submit-btn:hover{
+    background:#ff7b20;
+    transform:translateY(-2px);
+}
+
+/* NOTE */
+
+.note{
+    text-align:center;
+    color:#555;
+    font-size:11px;
+    line-height:1.5;
+    margin-top:18px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    color:#555;
+    font-size:12px;
+    padding:30px 0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .app{
+        padding:15px;
+    }
+
+    .order-box{
+        padding:20px;
+    }
+
+    .packages{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .title h1{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            APX<span>TOPUP</span>
+        </div>
+
+        <a href="index.html" class="back">
+            ← Home
+        </a>
+
+    </header>
+
+
+    <!-- TITLE -->
+
+    <section class="title">
+
+        <div class="icon">
+            💎
+        </div>
+
+        <h1>
+            UID <span>TOP UP</span>
+        </h1>
+
+        <p>
+            Enter your Free Fire details below
+        </p>
+
+    </section>
+
+
+    <!-- ORDER FORM -->
+
+    <section class="order-box">
+
+        <form>
+
+            <!-- UID -->
+
+            <div class="form-group">
+
+                <label>
+                    FREE FIRE UID
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your Player ID"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PACKAGE -->
+
+            <div class="form-group">
+
+                <label>
+                    SELECT DIAMOND PACKAGE
+                </label>
+
+                <div class="packages">
+
+                    <div class="package">
+
+                        <input
+                            type="radio"
+                            name="package"
+                            id="p1"
+                            required
+                        >
+
+                        <label for="p1">
+
+                            <strong>💎 100</strong>
+
+                            <span>Diamond</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="package">
+
+                        <input
+                            type="radio"
+                            name="package"
+                            id="p2"
+                        >
+
+                        <label for="p2">
+
+                            <strong>💎 310</strong>
+
+                            <span>Diamond</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="package">
+
+                        <input
+                            type="radio"
+                            name="package"
+                            id="p3"
+                        >
+
+                        <label for="p3">
+
+                            <strong>💎 520</strong>
+
+                            <span>Diamond</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="package">
+
+                        <input
+                            type="radio"
+                            name="package"
+                            id="p4"
+                        >
+
+                        <label for="p4">
+
+                            <strong>💎 1060</strong>
+
+                            <span>Diamond</span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAYMENT METHOD -->
+
+            <div class="form-group">
+
+                <label>
+                    PAYMENT METHOD
+                </label>
+
+                <select required>
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    <option>
+                        bKash
+                    </option>
+
+                    <option>
+                        Nagad
+                    </option>
+
+                    <option>
+                        Rocket
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PAYMENT NUMBER -->
+
+            <div class="form-group">
+
+                <label>
+                    YOUR PAYMENT NUMBER
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="01XXXXXXXXX"
+                    required
+                >
+
+            </div>
+
+
+            <!-- TRANSACTION ID -->
+
+            <div class="form-group">
+
+                <label>
+                    TRANSACTION ID
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter Transaction ID"
+                    required
+                >
+
+            </div>
+
+
+            <!-- INFO -->
+
+            <div class="payment-info">
+
+                💡 After making your payment, enter the
+                transaction ID above. Your order can then
+                be verified manually.
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                PLACE ORDER →
+            </button>
+
+
+            <div class="note">
+
+                Never share your Free Fire password or OTP.
+                APX TOPUP only requires your Player ID for UID top-up.
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 APX TOPUP — All Rights Reserved.
+
+    </footer>
+
+</div>
+
+</body>
+</html>
