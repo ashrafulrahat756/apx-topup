@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>APX TOPUP | Free Fire</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#080808;
+    color:#fff;
+}
+
+.app{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ff6a00;
+}
+
+.online{
+    font-size:12px;
+    color:#00ff88;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:25px;
+    padding:60px 25px;
+    border-radius:25px;
+    background:
+    radial-gradient(circle at top right,#ff6a0030,transparent 40%),
+    linear-gradient(145deg,#151515,#090909);
+    border:1px solid #292929;
+    text-align:center;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:9px 15px;
+    border-radius:30px;
+    background:#ff6a0015;
+    border:1px solid #ff6a00;
+    color:#ff7b20;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#ff6a00;
+}
+
+.hero p{
+    color:#999;
+    margin:20px auto;
+    max-width:500px;
+    line-height:1.6;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:15px 25px;
+    background:#ff6a00;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-2px);
+    background:#ff7b20;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin:60px 0 25px;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:8px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.service{
+    text-decoration:none;
+    color:white;
+    padding:28px;
+    border-radius:18px;
+    background:#111;
+    border:1px solid #242424;
+    transition:.25s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+    border-color:#ff6a00;
+    box-shadow:0 10px 30px #ff6a0015;
+}
+
+.service-icon{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:#ff6a0018;
+    color:#ff6a00;
+    font-size:23px;
+    margin-bottom:18px;
+}
+
+.service h3{
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#888;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    background:#101010;
+    border:1px solid #222;
+    padding:25px 18px;
+    border-radius:17px;
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.feature p{
+    color:#777;
+    font-size:12px;
+}
+
+/* DISCORD */
+
+.discord{
+    margin-top:60px;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:22px;
+    background:linear-gradient(135deg,#171717,#0d0d0d);
+    border:1px solid #292929;
+}
+
+.discord h2{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.discord p{
+    color:#888;
+    margin-bottom:20px;
+}
+
+.discord-btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:12px;
+    background:#5865F2;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.discord-btn:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    color:#555;
+    font-size:12px;
+    padding:35px 0 15px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .hero{
+        padding:45px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .app{
+        padding:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            APX<span>TOPUP</span>
+        </div>
+
+        <div class="online">
+            ● ONLINE
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-badge">
+            🔥 FREE FIRE TOP-UP
+        </div>
+
+        <h1>
+            POWER UP<br>
+            <span>YOUR GAME</span>
+        </h1>
+
+        <p>
+            Fast, secure and reliable Free Fire top-up service.
+        </p>
+
+        <a href="#services" class="hero-btn">
+            TOP UP NOW →
+        </a>
+
+    </section>
+
+
+    <!-- SERVICES TITLE -->
+
+    <div class="section-title" id="services">
+
+        <h2>
+            Choose a Service
+        </h2>
+
+        <p>
+            Select what you want to purchase
+        </p>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <!-- UID TOP UP -->
+
+        <a href="uid-topup.html" class="service">
+
+            <div class="service-icon">
+                💎
+            </div>
+
+            <h3>
+                UID TOP UP
+            </h3>
+
+            <p>
+                Top up diamonds directly using your Free Fire Player ID.
+            </p>
+
+        </a>
+
+
+        <!-- WEEKLY / MONTHLY -->
+
+        <a href="#" class="service">
+
+            <div class="service-icon">
+                📅
+            </div>
+
+            <h3>
+                WEEKLY / MONTHLY
+            </h3>
+
+            <p>
+                Get Weekly or Monthly membership for your account.
+            </p>
+
+        </a>
+
+
+        <!-- LEVEL UP PASS -->
+
+        <a href="#" class="service">
+
+            <div class="service-icon">
+                🎫
+            </div>
+
+            <h3>
+                LEVEL UP PASS
+            </h3>
+
+            <p>
+                Purchase Level Up Pass quickly and easily.
+            </p>
+
+        </a>
+
+
+        <!-- EVO ACCESS -->
+
+        <a href="#" class="service">
+
+            <div class="service-icon">
+                ⚡
+            </div>
+
+            <h3>
+                EVO ACCESS
+            </h3>
+
+            <p>
+                Get access to exciting EVO content and benefits.
+            </p>
+
+        </a>
+
+    </section>
+
+
+    <!-- WHY APX TOPUP -->
+
+    <div class="section-title">
+
+        <h2>
+            Why APX TOPUP?
+        </h2>
+
+        <p>
+            Simple, fast and reliable service
+        </p>
+
+    </div>
+
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                FAST
+            </h3>
+
+            <p>
+                Quick delivery
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>
+                SECURE
+            </h3>
+
+            <p>
+                Safe payment process
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💬
+            </div>
+
+            <h3>
+                24/7
+            </h3>
+
+            <p>
+                Support whenever you need
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISCORD -->
+
+    <section class="discord">
+
+        <h2>
+            JOIN OUR COMMUNITY
+        </h2>
+
+        <p>
+            Connect with APX TOPUP on Discord
+        </p>
+
+        <a
+            href="https://discord.gg/PWsaScBq"
+            class="discord-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            JOIN DISCORD
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 APX TOPUP — All Rights Reserved.
+
+    </footer>
+
+</div>
+
+</body>
+</html>
