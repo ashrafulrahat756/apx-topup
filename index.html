@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>APX TOPUP | Free Fire Top-Up</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #07090d;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    button,
+    input {
+      font-family: inherit;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 500px;
+      min-height: 100vh;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 55px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ffb000;
+      margin-left: 4px;
+    }
+
+    .status {
+      color: #ffb000;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .hero {
+      margin-bottom: 30px;
+    }
+
+    .badge {
+      display: inline-block;
+      color: #ffb000;
+      border: 1px solid #ffb000;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 43px;
+      line-height: 0.95;
+      margin-top: 18px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: #ffb000;
+    }
+
+    .hero p {
+      color: #858b96;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .card {
+      background: #10141b;
+      border: 1px solid #202733;
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      color: #9ba2ad;
+      font-size: 12px;
+      margin: 5px 0 9px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      background: #080b10;
+      border: 1px solid #29313d;
+      border-radius: 12px;
+      color: white;
+      outline: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    input:focus {
+      border-color: #ffb000;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .diamond-btn {
+      width: 100%;
+      background: #080b10;
+      border: 1px solid #29313d;
+      border-radius: 15px;
+      padding: 15px;
+      color: white;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .diamond-btn:active {
+      transform: scale(0.97);
+    }
+
+    .diamond-btn.selected {
+      border-color: #ffb000;
+      background: #1d1708;
+      box-shadow: 0 0 0 1px #ffb000;
+    }
+
+    .diamond-btn b,
+    .diamond-btn small,
+    .diamond-btn strong {
+      display: block;
+    }
+
+    .diamond-btn b {
+      font-size: 23px;
+    }
+
+    .diamond-btn small {
+      color: #7e8793;
+      font-size: 10px;
+      margin: 3px 0 10px;
+    }
+
+    .diamond-btn strong {
+      color: #ffb000;
+      font-size: 13px;
+    }
+
+    .buy {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-top: 16px;
+      border: none;
+      border-radius: 13px;
+      background: #ffb000;
+      color: #0b0903;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .buy:active {
+      transform: scale(0.98);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .features div {
+      background: #10141b;
+      border: 1px solid #202733;
+      border-radius: 15px;
+      padding: 14px 5px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .features b,
+    .features small {
+      display: block;
+      font-size: 9px;
+      margin-top: 5px;
+    }
+
+    .features small {
+      color: #747c88;
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .app {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <header class="header">
+      <div class="logo">
+        APX<span>TOPUP</span>
+      </div>
+
+      <div class="status">
+        ● ONLINE
+      </div>
+    </header>
+
+
+    <section class="hero">
+
+      <div class="badge">
+        🔥 FREE FIRE TOP-UP
+      </div>
+
+      <h1>
+        POWER UP<br>
+        <span>YOUR GAME</span>
+      </h1>
+
+      <p>
+        Fast & secure Free Fire diamond top-up.
+      </p>
+
+    </section>
+
+
+    <section class="card">
+
+      <label>
+        Free Fire Player ID
+      </label>
+
+      <input
+        type="text"
+        id="playerId"
+        placeholder="Enter your Player ID"
+      >
+
+
+      <label>
+        Select Diamonds
+      </label>
+
+      <div class="packages">
+
+        <button
+          type="button"
+          class="diamond-btn"
+          data-package="100 Diamonds"
+        >
+          <b>100 💎</b>
+          <small>DIAMONDS</small>
+          <strong>৳ PRICE</strong>
+        </button>
+
+
+        <button
+          type="button"
+          class="diamond-btn"
+          data-package="310 Diamonds"
+        >
+          <b>310 💎</b>
+          <small>DIAMONDS</small>
+          <strong>৳ PRICE</strong>
+        </button>
+
+
+        <button
+          type="button"
+          class="diamond-btn"
+          data-package="650 Diamonds"
+        >
+          <b>650 💎</b>
+          <small>DIAMONDS</small>
+          <strong>৳ PRICE</strong>
+        </button>
+
+
+        <button
+          type="button"
+          class="diamond-btn"
+          data-package="1050 Diamonds"
+        >
+          <b>1050 💎</b>
+          <small>DIAMONDS</small>
+          <strong>৳ PRICE</strong>
+        </button>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="buy"
+        id="buyBtn"
+      >
+        BUY NOW →
+      </button>
+
+    </section>
+
+
+    <div class="features">
+
+      <div>
+        ⚡
+        <b>FAST</b>
+        <small>Delivery</small>
+      </div>
+
+      <div>
+        🔒
+        <b>SECURE</b>
+        <small>Payment</small>
+      </div>
+
+      <div>
+        🎮
+        <b>24/7</b>
+        <small>Support</small>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    let selectedPackage = "";
+
+
+    document.querySelectorAll(".diamond-btn").forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        document
+          .querySelectorAll(".diamond-btn")
+          .forEach(function(btn) {
+            btn.classList.remove("selected");
+          });
+
+        this.classList.add("selected");
+
+        selectedPackage = this.dataset.package;
+
+      });
+
+    });
+
+
+    document.getElementById("buyBtn").addEventListener("click", function() {
+
+      const playerId =
+        document.getElementById("playerId").value.trim();
+
+
+      if (playerId === "") {
+        alert("Please enter your Free Fire Player ID.");
+        return;
+      }
+
+
+      if (selectedPackage === "") {
+        alert("Please select a diamond package.");
+        return;
+      }
+
+
+      alert(
+        "Player ID: " +
+        playerId +
+        "\nPackage: " +
+        selectedPackage
+      );
+
+    });
+
+  </script>
+
+</body>
+
+</html>
