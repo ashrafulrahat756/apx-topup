@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UID Top Up - APX TOPUP</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#111111;
+}
+
+header{
+    height:65px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #eeeeee;
+    background:#ffffff;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.home{
+    text-decoration:none;
+    color:#111;
+    font-size:13px;
+    font-weight:700;
+}
+
+.container{
+    max-width:520px;
+    margin:auto;
+    padding:25px 16px 40px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.title h1{
+    font-size:27px;
+    font-weight:900;
+}
+
+.title p{
+    color:#777;
+    font-size:13px;
+    margin-top:7px;
+}
+
+/* FORM */
+.form-box{
+    background:#ffffff;
+    border:1px solid #e8e8e8;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+input,
+select{
+    width:100%;
+    padding:13px;
+    border:1px solid #dddddd;
+    border-radius:10px;
+    outline:none;
+    background:#ffffff;
+    color:#111111;
+    font-size:14px;
+    margin-bottom:16px;
+}
+
+input:focus,
+select:focus{
+    border-color:#111111;
+}
+
+/* PACKAGES */
+.package-title{
+    font-size:16px;
+    font-weight:900;
+    margin-bottom:12px;
+}
+
+.packages{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.package{
+    position:relative;
+}
+
+.package input{
+    display:none;
+}
+
+.package label{
+    margin:0;
+    border:1px solid #e3e3e3;
+    border-radius:12px;
+    padding:14px 8px;
+    text-align:center;
+    cursor:pointer;
+    background:#ffffff;
+    transition:0.2s;
+}
+
+.package label strong{
+    display:block;
+    font-size:14px;
+}
+
+.package label span{
+    display:block;
+    color:#777;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.package input:checked + label{
+    border:2px solid #111111;
+    background:#f7f7f7;
+}
+
+/* PRICE */
+.price-box{
+    margin-top:15px;
+    padding:15px;
+    background:#f7f7f7;
+    border-radius:12px;
+    text-align:center;
+}
+
+.price-box small{
+    display:block;
+    color:#777;
+    font-size:11px;
+}
+
+#price{
+    display:block;
+    font-size:22px;
+    font-weight:900;
+    margin-top:4px;
+}
+
+/* PAYMENT */
+.note{
+    background:#f7f7f7;
+    border-left:3px solid #111;
+    padding:12px;
+    border-radius:8px;
+    font-size:11px;
+    color:#666;
+    margin-bottom:18px;
+}
+
+.order-btn{
+    width:100%;
+    border:none;
+    background:#111111;
+    color:white;
+    padding:14px;
+    border-radius:11px;
+    font-size:14px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.order-btn:active{
+    transform:scale(0.98);
+}
+
+.warning{
+    text-align:center;
+    color:#888;
+    font-size:11px;
+    margin-top:15px;
+    line-height:1.5;
+}
+
+footer{
+    text-align:center;
+    border-top:1px solid #eeeeee;
+    padding:20px;
+    color:#999;
+    font-size:11px;
+    margin-top:20px;
+}
+
+@media(max-width:360px){
+    .packages{
+        gap:8px;
+    }
+
+    .package label{
+        padding:12px 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">APX TOPUP</div>
+    <a href="index.html" class="home">HOME</a>
+</header>
+
+<div class="container">
+
+    <div class="title">
+        <h1>UID TOP UP</h1>
+        <p>Choose your Diamond package</p>
+    </div>
+
+    <form id="orderForm">
+
+        <!-- UID -->
+        <div class="form-box">
+
+            <label for="uid">FREE FIRE PLAYER ID</label>
+
+            <input
+                type="number"
+                id="uid"
+                name="uid"
+                placeholder="Enter your Player ID"
+                required
+            >
+
+            <!-- PACKAGES -->
+            <div class="package-title">
+                DIAMOND PACKAGE
+            </div>
+
+            <div class="packages">
+
+                <div class="package">
+                    <input type="radio" name="package" id="p1"
+                    value="25 Diamond" data-price="25">
+                    <label for="p1">
+                        <strong>25 💎</strong>
+                        <span>BDT 25</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p2"
+                    value="50 Diamond" data-price="35">
+                    <label for="p2">
+                        <strong>50 💎</strong>
+                        <span>BDT 35</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p3"
+                    value="115 Diamond" data-price="79">
+                    <label for="p3">
+                        <strong>115 💎</strong>
+                        <span>BDT 79</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p4"
+                    value="240 Diamond" data-price="158">
+                    <label for="p4">
+                        <strong>240 💎</strong>
+                        <span>BDT 158</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p5"
+                    value="355 Diamond" data-price="240">
+                    <label for="p5">
+                        <strong>355 💎</strong>
+                        <span>BDT 240</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p6"
+                    value="480 Diamond" data-price="325">
+                    <label for="p6">
+                        <strong>480 💎</strong>
+                        <span>BDT 325</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p7"
+                    value="505 Diamond" data-price="350">
+                    <label for="p7">
+                        <strong>505 💎</strong>
+                        <span>BDT 350</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p8"
+                    value="610 Diamond" data-price="420">
+                    <label for="p8">
+                        <strong>610 💎</strong>
+                        <span>BDT 420</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p9"
+                    value="850 Diamond" data-price="570">
+                    <label for="p9">
+                        <strong>850 💎</strong>
+                        <span>BDT 570</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p10"
+                    value="1090 Diamond" data-price="730">
+                    <label for="p10">
+                        <strong>1090 💎</strong>
+                        <span>BDT 730</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p11"
+                    value="1240 Diamond" data-price="820">
+                    <label for="p11">
+                        <strong>1240 💎</strong>
+                        <span>BDT 820</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p12"
+                    value="1720 Diamond" data-price="1130">
+                    <label for="p12">
+                        <strong>1720 💎</strong>
+                        <span>BDT 1130</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p13"
+                    value="2090 Diamond" data-price="1370">
+                    <label for="p13">
+                        <strong>2090 💎</strong>
+                        <span>BDT 1370</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p14"
+                    value="2530 Diamond" data-price="1610">
+                    <label for="p14">
+                        <strong>2530 💎</strong>
+                        <span>BDT 1610</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p15"
+                    value="4010 Diamond" data-price="2570">
+                    <label for="p15">
+                        <strong>4010 💎</strong>
+                        <span>BDT 2570</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p16"
+                    value="5060 Diamond" data-price="3220">
+                    <label for="p16">
+                        <strong>5060 💎</strong>
+                        <span>BDT 3220</span>
+                    </label>
+                </div>
+
+                <div class="package">
+                    <input type="radio" name="package" id="p17"
+                    value="10120 Diamond" data-price="6440">
+                    <label for="p17">
+                        <strong>10120 💎</strong>
+                        <span>BDT 6440</span>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="price-box">
+                <small>SELECTED PRICE</small>
+                <span id="price">BDT 0</span>
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT -->
+        <div class="form-box">
+
+            <label for="paymentMethod">
+                PAYMENT METHOD
+            </label>
+
+            <select id="paymentMethod" required>
+                <option value="">Select Payment Method</option>
+                <option value="bKash">bKash</option>
+                <option value="Nagad">Nagad</option>
+                <option value="Rocket">Rocket</option>
+            </select>
+
+
+            <label for="paymentNumber">
+                PAYMENT NUMBER
+            </label>
+
+            <input
+                type="tel"
+                id="paymentNumber"
+                placeholder="Enter payment number"
+                required
+            >
+
+
+            <label for="transactionId">
+                TRANSACTION ID
+            </label>
+
+            <input
+                type="text"
+                id="transactionId"
+                placeholder="Enter Transaction ID"
+                required
+            >
+
+            <div class="note">
+                Payment can be manually verified after your order.
+            </div>
+
+            <button type="submit" class="order-btn">
+                PLACE ORDER
+            </button>
+
+            <div class="warning">
+                ⚠️ Never share your Free Fire password or OTP.<br>
+                Only your Player ID is required for top up.
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+<footer>
+    © 2026 APX TOPUP. All Rights Reserved.
+</footer>
+
+
+<script>
+
+const packages = document.querySelectorAll(
+    'input[name="package"]'
+);
+
+const price = document.getElementById("price");
+
+packages.forEach(function(pkg){
+
+    pkg.addEventListener("change", function(){
+
+        price.textContent =
+            "BDT " + this.dataset.price;
+
+    });
+
+});
+
+
+document.getElementById("orderForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const uid =
+        document.getElementById("uid").value;
+
+    const selected =
+        document.querySelector(
+            'input[name="package"]:checked'
+        );
+
+    const payment =
+        document.getElementById(
+            "paymentMethod"
+        ).value;
+
+    const transaction =
+        document.getElementById(
+            "transactionId"
+        ).value;
+
+
+    if(!selected){
+
+        alert(
+            "Please select a Diamond package."
+        );
+
+        return;
+    }
+
+
+    alert(
+        "Order information received!\n\n" +
+
+        "UID: " + uid + "\n" +
+
+        "Package: " + selected.value + "\n" +
+
+        "Payment: " + payment + "\n" +
+
+        "Transaction ID: " + transaction +
+
+        "\n\nOrder verification will be handled manually."
+    );
+
+});
+
+</script>
+
+</body>
+</html>
