@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>APX TOPUP</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#111111;
+}
+
+/* HEADER */
+header{
+    height:65px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #eeeeee;
+    background:#ffffff;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    color:#555;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    background:#19c463;
+    border-radius:50%;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:45px 20px 30px;
+}
+
+.hero h1{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.hero h1 span{
+    color:#111;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:14px;
+    color:#777;
+}
+
+/* SERVICES */
+.services{
+    max-width:500px;
+    margin:auto;
+    padding:10px 16px;
+}
+
+.services-title{
+    font-size:16px;
+    font-weight:800;
+    margin-bottom:14px;
+}
+
+/* 2 x 2 GRID */
+.service-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+/* CARD */
+.service-card{
+    text-decoration:none;
+    color:#111;
+    background:#ffffff;
+    border:1px solid #e8e8e8;
+    border-radius:16px;
+    padding:18px 10px;
+    min-height:135px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+
+    transition:0.2s;
+}
+
+.service-card:active{
+    transform:scale(0.97);
+}
+
+/* ICON */
+.icon{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    background:#f3f3f3;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.service-card h3{
+    font-size:14px;
+    font-weight:800;
+    text-align:center;
+}
+
+.service-card p{
+    font-size:11px;
+    color:#888;
+    margin-top:5px;
+    text-align:center;
+}
+
+/* WHY APX */
+.why{
+    max-width:500px;
+    margin:35px auto 0;
+    padding:0 16px;
+}
+
+.why h2{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+}
+
+.feature{
+    border:1px solid #eeeeee;
+    border-radius:13px;
+    padding:15px 7px;
+    text-align:center;
+}
+
+.feature strong{
+    display:block;
+    font-size:12px;
+}
+
+.feature span{
+    display:block;
+    color:#888;
+    font-size:10px;
+    margin-top:4px;
+}
+
+/* DISCORD */
+.discord{
+    max-width:500px;
+    margin:35px auto;
+    padding:0 16px;
+}
+
+.discord-box{
+    background:#111111;
+    color:white;
+    border-radius:18px;
+    padding:25px 20px;
+    text-align:center;
+}
+
+.discord-box h2{
+    font-size:20px;
+}
+
+.discord-box p{
+    font-size:12px;
+    color:#bbb;
+    margin:8px 0 18px;
+}
+
+.discord-btn{
+    display:inline-block;
+    background:white;
+    color:#111;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:800;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid #eeeeee;
+    text-align:center;
+    padding:22px 10px;
+    color:#999;
+    font-size:11px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+@media(max-width:360px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .service-card{
+        min-height:125px;
+        padding:15px 7px;
+    }
+
+    .icon{
+        width:43px;
+        height:43px;
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">APX TOPUP</div>
+
+    <div class="status">
+        <div class="dot"></div>
+        ONLINE
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+    <h1>FREE FIRE</h1>
+    <p>POWER UP YOUR GAME</p>
+</section>
+
+
+<!-- TOP UP SERVICES -->
+<section class="services">
+
+    <div class="services-title">
+        TOP UP SERVICES
+    </div>
+
+    <div class="service-grid">
+
+        <!-- UID TOP UP -->
+        <a href="uid-topup.html" class="service-card">
+
+            <div class="icon">💎</div>
+
+            <h3>UID TOP UP</h3>
+
+            <p>Diamond Top Up</p>
+
+        </a>
+
+
+        <!-- WEEKLY / MONTHLY -->
+        <a href="#" class="service-card">
+
+            <div class="icon">📅</div>
+
+            <h3>WEEKLY / MONTHLY</h3>
+
+            <p>Membership</p>
+
+        </a>
+
+
+        <!-- LEVEL UP PASS -->
+        <a href="#" class="service-card">
+
+            <div class="icon">⚡</div>
+
+            <h3>LEVEL UP PASS</h3>
+
+            <p>Level Rewards</p>
+
+        </a>
+
+
+        <!-- EVO ACCESS -->
+        <a href="#" class="service-card">
+
+            <div class="icon">🛡️</div>
+
+            <h3>EVO ACCESS</h3>
+
+            <p>Evolution Access</p>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- WHY APX TOPUP -->
+<section class="why">
+
+    <h2>Why APX TOPUP?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <strong>⚡ FAST</strong>
+            <span>Quick Delivery</span>
+        </div>
+
+        <div class="feature">
+            <strong>🔒 SECURE</strong>
+            <span>Safe Payment</span>
+        </div>
+
+        <div class="feature">
+            <strong>24/7</strong>
+            <span>Support</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DISCORD -->
+<section class="discord">
+
+    <div class="discord-box">
+
+        <h2>JOIN OUR COMMUNITY</h2>
+
+        <p>
+            Connect with APX TOPUP on Discord
+        </p>
+
+        <a
+            href="https://discord.gg/PWsaScBq"
+            class="discord-btn"
+            target="_blank"
+        >
+            JOIN DISCORD
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    © 2026 APX TOPUP. All Rights Reserved.
+</footer>
+
+</body>
+</html>
